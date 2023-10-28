@@ -1,0 +1,29 @@
+//printing name n times taken from user and set a limit to print the desired times
+
+package Strivers;
+
+import java.util.Scanner;
+
+public class Rec_printNames {
+	static Scanner sc = new Scanner(System.in);
+	
+	static int count = 0;
+	public static void recName(String names) {
+		if(count  == 10) {
+			return;
+		}
+		count++;
+		System.out.println("Printed \""+names+"\" ==> count :"+count+" times");
+		recName(names);
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String name;
+		System.out.println("Enter your name to print using recursion: ");
+		name = sc.next();
+		recName(name);
+
+	}
+
+}
